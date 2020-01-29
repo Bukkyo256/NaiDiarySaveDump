@@ -107,6 +107,8 @@ namespace NaiRegEdit
         static void Main(string[] args)
         {
             Program p = new Program();
+            Console.WriteLine("Slot parameter is always required. It corresponds to the save slot in the game.");
+            Console.WriteLine("You also have to either save to disk -d true or store in registry -r true");
             Parser.Default.ParseArguments<CmdOptions>(args)
                    .WithParsed<CmdOptions>(o =>
                    {
